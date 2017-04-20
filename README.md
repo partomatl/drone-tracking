@@ -1,7 +1,7 @@
 # drone-tracking
 Control an EACHINE E010 drone from a computer using Python and an ArUco marker.
 
-(images/readme.jpg)
+![EACHINE E010 with an ArUco marker](images/readme.jpg)
 
 Using work from [@goebish](https://github.com/goebish/nrf24_multipro) (transmitter protocol) and [@perrytsao](https://github.com/perrytsao/nrf24_cx10_pc) (input through serial port).
 
@@ -17,7 +17,7 @@ Using work from [@goebish](https://github.com/goebish/nrf24_multipro) (transmitt
 
 ## How-To
 
-1. Connect the nRF24L01+ to the Arduino Uno using [perrystao's tutorial](https://github.com/perrytsao/nrf24_cx10_pc/blob/master/README.md)
+1. Connect the nRF24L01+ to the Arduino Uno using [perrystao's tutorial](https://github.com/perrytsao/nrf24_cx10_pc/blob/master/README.md).
 2. Upload **nrF24_multipro/nRF24_multipro.ino** to your Arduino Uno. You have to modify it if your drone is not an E010 drone.
 3. Calibrate your camera using for instance the [calibrate.py](https://github.com/opencv/opencv/blob/master/samples/python/calibrate.py) example in the OpenCV sources. Don't forget to specify the size of your chessboard and the size of the squares in the unit you want to use.
 4. Print a board of ArUco markers that fit on your drone. I used [this one](images/board.jpg) for my E010 drone.
