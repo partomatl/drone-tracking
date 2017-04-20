@@ -395,7 +395,7 @@ while True:
     throttleCommand = round(clamp(throttleCommand, 1000, 2000))
     aileronCommand = round(clamp(aileronCommand, 1000, 2000))
     elevatorCommand = round(clamp(elevatorCommand, 1000, 2000))
-    angleCommand = round(clamp(angleCommand, 1000, 2000))
+    angleCommand = round(clamp(rudderCommand, 1000, 2000))
 
     # create the command to send to Arduino
     command = "%i,%i,%i,%i" % (throttleCommand, aileronCommand, elevatorCommand, rudderCommand)
