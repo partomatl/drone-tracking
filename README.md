@@ -1,12 +1,12 @@
 # drone-tracking
-Control an EACHINE E010 drone from a computer using Python, a webcam and an ArUco marker.
+Control an Eachine E010 drone from a computer using Python, a webcam and an ArUco marker.
 
 ![EACHINE E010 with an ArUco marker](images/readme_cropped.jpg)
 
 Using work from [@goebish](https://github.com/goebish/nrf24_multipro) (transmitter protocol) and [@perrytsao](https://github.com/perrytsao/nrf24_cx10_pc) (input through serial port).
 
 ## Hardware Setup
-- EACHINE E010 drone (about [$15](http://www.banggood.com/Eachine-E010-Mini-2_4G-4CH-6-Axis-Headless-Mode-RC-Quadcopter-RTF-p-1066972.html))
+- Eachine E010 drone (about [$15](http://www.banggood.com/Eachine-E010-Mini-2_4G-4CH-6-Axis-Headless-Mode-RC-Quadcopter-RTF-p-1066972.html))
 - Arduino Uno (about [$18](https://www.amazon.com/Arduino-Uno-R3-Microcontroller-A000066/dp/B008GRTSV6))
 - 2.4GHz nRF24L01+ Wireless Card (about [$1.7](https://www.amazon.com/gp/product/B015PREUOE/) each)
 - Socket adapter with on-board 3.3V regulator (about [$1.3](https://www.amazon.com/gp/product/B01M61530E/) each)
