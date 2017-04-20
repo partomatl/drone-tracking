@@ -1,7 +1,7 @@
 """Gets the coordinates of a marker wrt the origin marker, in the world frame.
 Takes the pose (R_origin and tvec_origin) of the origin and
 the pose (rvec_marker and tvec_marker) of the marker as parameters
-and returns the (x,y,z) world coordinates, as well as the orientation angle in radians.
+and returns the (x,y,z) world coordinates, as well as the orientation angle in degrees.
 
 R_origin (3x3 matrix) is cv2.Rodrigues(rvec_origin).
 tvec_origin (3x1 vector) is the flattened tvec_origin.
