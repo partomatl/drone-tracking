@@ -10,6 +10,9 @@ Using work from [@goebish](https://github.com/goebish/nrf24_multipro) (transmitt
 - Arduino Uno
 - 2.4GHz nRF24L01+ Wireless Card
 - Socket adapter with on-board 3.3V regulator
+- A webcam with a low latency
+- A printer
+- Double-sided tape
 
 ## Software Setup
 - Python 3.6
