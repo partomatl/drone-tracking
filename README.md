@@ -17,7 +17,7 @@ Using work from [@goebish](https://github.com/goebish/nrf24_multipro) (transmitt
 
 ## Software Setup
 - Python 3.6
-- OpenCV 3.2.0
+- OpenCV 3.2.0 with [opencv_contrib](https://github.com/opencv/opencv_contrib) installed
 
 ## How-To
 
