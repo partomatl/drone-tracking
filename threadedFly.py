@@ -287,7 +287,7 @@ while True:
         withMarkers = cropped
 
     # print coordinates and orientation
-    print("[DRONE] X: {:.1f}, Y: {:.1f}, Z: {:.1f}, theta: {:.1f}".format(xDrone, yDrone, zDrone, angleDrone))
+    print("[DRONE] X={:.1f} Y={:.1f} Z={:.1f} angle={:.1f}".format(xDrone, yDrone, zDrone, angleDrone))
 
     # display the frame
     cv2.imshow('frame', withMarkers)
@@ -395,7 +395,7 @@ while True:
     throttleCommand = round(clamp(throttleCommand, 1000, 2000))
     aileronCommand = round(clamp(aileronCommand, 1000, 2000))
     elevatorCommand = round(clamp(elevatorCommand, 1000, 2000))
-    angleCommand = round(clamp(rudderCommand, 1000, 2000))
+    rudderCommand = round(clamp(rudderCommand, 1000, 2000))
 
     # create the command to send to Arduino
     command = "%i,%i,%i,%i" % (throttleCommand, aileronCommand, elevatorCommand, rudderCommand)
