@@ -5,11 +5,12 @@ Control an EACHINE E010 drone from a computer using Python and an ArUco marker.
 
 Using work from [@goebish](https://github.com/goebish/nrf24_multipro) (transmitter protocol) and [@perrytsao](https://github.com/perrytsao/nrf24_cx10_pc) (input through serial port).
 
-
 ## Hardware Setup
-- Arduino Uno
-- 2.4GHz nRF24L01+ Wireless Card
-- Socket adapter with on-board 3.3V regulator
+- EACHINE E010 drone (about [http://www.banggood.com/Eachine-E010-Mini-2_4G-4CH-6-Axis-Headless-Mode-RC-Quadcopter-RTF-p-1066972.html]($15))
+- Arduino Uno (about [https://www.amazon.com/Arduino-Uno-R3-Microcontroller-A000066/dp/B008GRTSV6]($18))
+- 2.4GHz nRF24L01+ Wireless Card (about [https://www.amazon.com/gp/product/B015PREUOE/]($1.7) each)
+- Socket adapter with on-board 3.3V regulator (about [https://www.amazon.com/gp/product/B01M61530E/]($1.3) each)
+- A few male to female jumper wires ([https://www.amazon.com/gp/product/B00PBZMN7C/](here) for instance)
 - A webcam with a low latency
 - A printer
 - Double-sided tape
