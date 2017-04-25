@@ -2,7 +2,7 @@ clear
 clc
 close all
 
-load('recording2017_04_20_16_52.mat')
+load('recording2017_04_25_13_16.mat')
 
 figure
 
@@ -100,3 +100,9 @@ mean(ecart)
 
 figure
 plot(time(1:end-1),ecart)
+
+figure
+plot3(xFiltered,yFiltered,zFiltered)
+xlabel('x (cm)')
+ylabel('y (cm)')
+zlabel('z (cm)')
