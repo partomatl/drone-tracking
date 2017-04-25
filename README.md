@@ -1,5 +1,6 @@
 # drone-tracking
-[![EACHINE E010 with an ArUco marker](images/readme_cropped.jpg)
+![EACHINE E010 with an ArUco marker](images/readme_cropped.jpg)
+
 Control an Eachine E010 drone from a computer using Python, a webcam and an ArUco marker.
 
 Using work from [@goebish](https://github.com/goebish/nrf24_multipro) (transmitter protocol) and [@perrytsao](https://github.com/perrytsao/nrf24_cx10_pc) (input through serial port).
