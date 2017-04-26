@@ -1,5 +1,5 @@
-# drone-tracking
-![EACHINE E010 with an ArUco marker](images/readme_cropped.jpg)
+# Control of an Eachine E010
+![Eachine E010 with an ArUco marker](images/readme_cropped.jpg)
 
 Control an Eachine E010 drone from a computer using Python, a webcam and an ArUco marker.
 
