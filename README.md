@@ -7,7 +7,7 @@ Using work from [@goebish](https://github.com/goebish/nrf24_multipro) (transmitt
 
 ## Video
 Click on the GIF to see the video.
-[![Video](images/gif-video.gif)](https://www.youtube.com/watch?v=eLh0-MmN0lA)
+[![Video](images/gif-video.gif)](https://www.youtube.com/watch?v=mWvuBfGUugk)
 
 ## Hardware Setup
 - Eachine E010 drone (about [$15](http://www.banggood.com/Eachine-E010-Mini-2_4G-4CH-6-Axis-Headless-Mode-RC-Quadcopter-RTF-p-1066972.html))

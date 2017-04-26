@@ -161,10 +161,15 @@ xError_old, yError_old, zError_old, angleError_old = 0, 0, 0, 0
 # KIx, KIy, KIz, KIangle = 0, 0, 0.15, 0
 # KDx, KDy, KDz, KDangle = 160, 160, 115, 10
 
-# second set with filtering of measurements
+# # second set with filtering of measurements (30 fps)
 KPx, KPy, KPz, KPangle = 3, 3, 4, -3
 KIx, KIy, KIz, KIangle = 0, 0, 0.1, 0
 KDx, KDy, KDz, KDangle = 120, 120, 80, 10
+
+# third set with video recording (23 fps)
+# KPx, KPy, KPz, KPangle = 3, 3, 4, -3
+# KIx, KIy, KIz, KIangle = 0, 0, 0.1*30/23, 0
+# KDx, KDy, KDz, KDangle = 120*23/30, 120*23/30, 80*23/30, 10*23/30
 
 # third set for trajectory
 # KPx, KPy, KPz, KPangle = 6, 6, 8, -3
@@ -214,6 +219,11 @@ cap = WebcamVideoStream(src=0).start()
 
 # wait one second for everything to settle before reading first frame
 time.sleep(1)
+
+# create a video of the tracking
+timestamp = "{:%Y_%m_%d_%H_%M}".format(datetime.now())
+fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
+out = cv2.VideoWriter('recordings/video' + timestamp + '.mov', fourcc, 30, (612, 425), True)
 
 # start FPS counter
 fps = FPS()
@@ -290,10 +300,13 @@ while True:
     print("[DRONE] X={:.1f} Y={:.1f} Z={:.1f} angle={:.1f}".format(xDrone, yDrone, zDrone, angleDrone))
 
     # display the frame
-    cv2.imshow('frame', withMarkers)
+    # cv2.imshow('frame', withMarkers)
+
+    # write in the video
+    out.write(withMarkers)
 
     # wait 1 ms for a key to be pressed
-    key = cv2.waitKey(1)
+    key = cv2.waitKey(20)
 
     # abort if we lost the drone for about 1.5 secs
     if framesWithoutDrone >= 45:
@@ -447,6 +460,9 @@ while(i < 10):
 
 # release capture and close all the windows
 cap.stop()
+
+# release video
+out.release()
 cv2.destroyAllWindows()
 
 # close the connection and reopen it
@@ -455,5 +471,4 @@ arduino = serial.Serial(usb_port, 115200, timeout=.01)
 arduino.close()
 
 # save the log in Matlab format
-timestamp = "{:%Y_%m_%d_%H_%M}".format(datetime.now())
 scipy.io.savemat('recordings/recording' + timestamp + '.mat', mdict={'time': timeRecord, 'x': xRecord, 'xFiltered': xFilteredRecord, 'y': yRecord, 'yFiltered': yFilteredRecord, 'z': zRecord, 'zFiltered': zFilteredRecord, 'angle': angleRecord, 'angleFiltered': angleFilteredRecord, 'xError': xErrorRecord, 'yError': yErrorRecord, 'zError': zErrorRecord, 'angleError': angleErrorRecord, 'aileron': aileronRecord, 'elevator': elevatorRecord, 'throttle': throttleRecord, 'rudder': rudderRecord})
